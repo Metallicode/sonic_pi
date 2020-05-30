@@ -23,9 +23,38 @@ temp =  [440.0, 466.1637615180899,
          698.4564628660078, 739.9888454232689,
          783.9908719634986, 830.6093951598905,
          880.0]
+
+swara_up = [440.0,
+            469.3333333333333,
+            495.0,
+            528.0,
+            556.875,
+            594.0,
+            626.484375,
+            660.0,
+            704.0,
+            742.5,
+            792.0,
+            835.3125,
+            880.0]
  
+swara_down = [440.0,
+            463.5390946502058,
+            488.8888888888889, 
+            521.4814814814814,
+            550.0,
+            586.6666666666666,
+            618.75, 
+            660.0,
+            695.3086419753085,
+            733.3333333333334,
+            782.2222222222222,
+            825.0,
+            880.0]
 
 r = ["I","IIb","II","IIIb","III","IV","IV#","V","VIb","VI","VIIb","VII","VIII"]
+
+
 fig = plt.figure()
 fig.suptitle('Tuning algorithm comparison', fontsize=20)
 
@@ -38,7 +67,11 @@ plt.plot(r, pyth, c= '#ff0000')
 plt.plot(r, just, c=  '#0000ff')
 plt.plot(r, temp, c= '#00ff00')
 plt.plot(r, harmonic, c= '#cc00cc')
+
+plt.plot(r, swara_up, c= '#ff9900')
+plt.plot(r, swara_down, c= '#ff0066')
+
 plt.xlabel("Interval")
 plt.ylabel("Frequency (Hz)")
-plt.legend(['Pythagorean', 'Just','Equal Temperament','Harmonic'], loc=4)
+plt.legend(['Pythagorean', 'Just','Equal Temperament','Harmonic', 'swara(up)', 'swara(down)'], loc=4)
 plt.show()
